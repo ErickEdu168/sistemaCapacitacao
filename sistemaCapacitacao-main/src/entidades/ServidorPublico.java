@@ -1,6 +1,8 @@
 package entidades;
 
-public class ServidorPublico {
+public class
+
+ServidorPublico {
         private int matricula;
         private String nome;
         private String foto;
@@ -14,6 +16,17 @@ public class ServidorPublico {
         private String celular;
         private String cpf;
         private String lotacao;
+
+        private double horasExtras;
+
+        public double getHorasExtras() {
+                return horasExtras;
+        }
+
+        public void setHorasExtras(double horasExtras) {
+                this.horasExtras = horasExtras;
+        }
+
         private String email;
 
         public String getEmail() {
@@ -72,11 +85,11 @@ public class ServidorPublico {
                 this.vinculo = vinculo;
         }
 
-        public double getSalario() {
+        public double getSalrio() {
                 return salario;
         }
 
-        public void setSalario(double salario) {
+        public void setSalrio(double salario) {
                 this.salario = salario;
         }
 
@@ -92,7 +105,7 @@ public class ServidorPublico {
                 return tempoDeContribuicao;
         }
 
-        public void setTempoDeContribuicao(int tempoDeContribuicao) {
+        public void setTempoDeContrbuicao(int tempoDeContribuicao) {
                 this.tempoDeContribuicao = tempoDeContribuicao;
         }
 
@@ -126,5 +139,11 @@ public class ServidorPublico {
 
         public void setCpf(String cpf) {
                 this.cpf = cpf;
+        }
+
+        public double calcularSalarioDaHoraExtra(double horasTrabalhadas, double valorHora){
+                double salarioMensal = salario + (horasTrabalhadas + valorHora);
+                this.horasExtras = salarioMensal;
+                        return (salarioMensal);
         }
 }

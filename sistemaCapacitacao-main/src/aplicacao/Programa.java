@@ -9,9 +9,11 @@ public class Programa {
         isabela.setCargo("Auditor");
         isabela.setOrgao("ANVISA");
         isabela.setLotacao("Brasilia");
-        isabela.setEmail("isabela@gmail.");
+        isabela.setEmail("isabela@gmail.com");
 
         System.out.println("Servidor: "+ isabela.getNome());
+
+        System.out.println("Horas extras: "+isabela.getHorasExtras());
 
     }
 }
